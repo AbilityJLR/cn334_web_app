@@ -2,94 +2,116 @@
 <html lang="th">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>รายการสินค้า - ชาไทยหอมละมุน</title>
-    <style>
-        body {
-            font-family: 'Sarabun', sans-serif;
-            margin: 0;
-            padding: 20px;
-            background-color: #f5f5f5;
-        }
-        .main-table {
-            width: 80%;
-            margin: 0 auto;
-            background-color: white;
-            border-collapse: collapse;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        .header {
-            background-color: #8B4513;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-        .product-table {
-            width: 90%;
-            margin: 20px auto;
-            border-collapse: collapse;
-        }
-        .product-table td {
-            padding: 15px;
-            border: 1px solid #ddd;
-        }
-        .button {
-            background-color: #D2691E;
-            color: white;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 5px;
-            display: inline-block;
-        }
-        .button:hover {
-            background-color: #8B4513;
-        }
-        .nav-links {
-            text-align: center;
-            padding: 10px;
-        }
-    </style>
+    <link rel="stylesheet" type="" href="./catalog.css">
 </head>
 <body>
-    <table class="main-table">
-        <tr>
-            <td class="header">
-                <h1>รายการสินค้า</h1>
-                <h2>ชาไทยหอมละมุน</h2>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <table class="product-table">
-                    <tr>
-                        <td width="30%">
-                            <img src="https://image.makewebeasy.net/makeweb/m_1200x600/W7OuxZEpB/Product04/%E0%B8%8A%E0%B8%B2%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B8%A7%E0%B8%B1%E0%B8%95%E0%B8%96%E0%B8%B8%E0%B8%94%E0%B8%B4%E0%B8%9A_07.jpg?v=202405291424" alt="ชาไทยพรีเมียม" style="width: 100%;">
-                        </td>
-                        <td>
-                            <h3>ชาไทยพรีเมียม สูตรต้นตำรับ</h3>
-                            <p>ชาไทยคุณภาพเยี่ยม คัดสรรจากใบชาอัสสัมชั้นดี หอมละมุน รสชาติกลมกล่อม</p>
-                            <p>ราคา: 250 บาท</p>
-                            <a href="checkout.html" class="button">สั่งซื้อสินค้า</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td width="30%">
-                            <img src="https://st.bigc-cs.com/cdn-cgi/image/format=webp,quality=90/public/media/catalog/product/19/88/8850370721119/8850370721119_1-20221214112645-.jpg" alt="ชาไทยแบบถุงชง" style="width: 100%;">
-                        </td>
-                        <td>
-                            <h3>ชาไทยแบบถุงชง สะดวกพร้อมดื่ม</h3>
-                            <p>ชาไทยแบบถุงชง สะดวก ง่าย พร้อมดื่ม รสชาติเข้มข้น หอมกลิ่นใบชาแท้</p>
-                            <p>ราคา: 180 บาท</p>
-                            <a href="checkout.html" class="button">สั่งซื้อสินค้า</a>
-                        </td>
-                    </tr>
-                </table>
-            </td>
-        </tr>
-        <tr>
-            <td class="nav-links">
-                <a href="index.html" class="button">กลับหน้าหลัก</a>
-            </td>
-        </tr>
-    </table>
+    <div class="container">
+        <header class="header">
+            <h1>รายการสินค้า</h1>
+            <h2>ชาไทยหอมละมุน</h2>
+        </header>
+
+        <main class="products-container">
+            <div class="product-card">
+                <div class="product-content">
+                    <div class="product-image">
+                        <img src="https://image.makewebeasy.net/makeweb/m_1200x600/W7OuxZEpB/Product04/%E0%B8%8A%E0%B8%B2%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B8%A7%E0%B8%B1%E0%B8%95%E0%B8%96%E0%B8%B8%E0%B8%94%E0%B8%B4%E0%B8%9A_07.jpg?v=202405291424" alt="ชาไทยพรีเมียม">
+                    </div>
+                    <div class="product-info">
+                        <h3>ชาไทยพรีเมียม สูตรต้นตำรับ</h3>
+                        <p>ชาไทยคุณภาพเยี่ยม คัดสรรจากใบชาอัสสัมชั้นดี หอมละมุน รสชาติกลมกล่อม</p>
+                        <p>ราคา: 250 บาท</p>
+                        <a href="checkout.html" class="button">สั่งซื้อสินค้า</a>
+
+                        <div class="review-section">
+                            <h4>รีวิวสินค้า</h4>
+                            <form class="review-form">
+                                <div class="form-group">
+                                    <label for="name1">ชื่อ</label>
+                                    <input type="text" id="name1" name="name" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>คะแนน</label>
+                                    <div class="rating">
+                                        <input type="radio" id="star5-1" name="rating" value="5" required>
+                                        <label for="star5-1">5</label>
+                                        <input type="radio" id="star4-1" name="rating" value="4">
+                                        <label for="star4-1">4</label>
+                                        <input type="radio" id="star3-1" name="rating" value="3">
+                                        <label for="star3-1">3</label>
+                                        <input type="radio" id="star2-1" name="rating" value="2">
+                                        <label for="star2-1">2</label>
+                                        <input type="radio" id="star1-1" name="rating" value="1">
+                                        <label for="star1-1">1</label>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="review1">ข้อความรีวิว</label>
+                                    <textarea id="review1" name="review" rows="4" required></textarea>
+                                </div>
+
+                                <button type="submit" class="submit-review">ส่งรีวิว</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-content">
+                    <div class="product-image">
+                        <img src="https://st.bigc-cs.com/cdn-cgi/image/format=webp,quality=90/public/media/catalog/product/19/88/8850370721119/8850370721119_1-20221214112645-.jpg" alt="ชาไทยแบบถุงชง">
+                    </div>
+                    <div class="product-info">
+                        <h3>ชาไทยแบบถุงชง สะดวกพร้อมดื่ม</h3>
+                        <p>ชาไทยแบบถุงชง สะดวก ง่าย พร้อมดื่ม รสชาติเข้มข้น หอมกลิ่นใบชาแท้</p>
+                        <p>ราคา: 180 บาท</p>
+                        <a href="checkout.html" class="button">สั่งซื้อสินค้า</a>
+
+                        <div class="review-section">
+                            <h4>รีวิวสินค้า</h4>
+                            <form class="review-form">
+                                <div class="form-group">
+                                    <label for="name2">ชื่อ</label>
+                                    <input type="text" id="name2" name="name" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>คะแนน</label>
+                                    <div class="rating">
+                                        <input type="radio" id="star5-2" name="rating" value="5" required>
+                                        <label for="star5-2">5</label>
+                                        <input type="radio" id="star4-2" name="rating" value="4">
+                                        <label for="star4-2">4</label>
+                                        <input type="radio" id="star3-2" name="rating" value="3">
+                                        <label for="star3-2">3</label>
+                                        <input type="radio" id="star2-2" name="rating" value="2">
+                                        <label for="star2-2">2</label>
+                                        <input type="radio" id="star1-2" name="rating" value="1">
+                                        <label for="star1-2">1</label>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="review2">ข้อความรีวิว</label>
+                                    <textarea id="review2" name="review" rows="4" required></textarea>
+                                </div>
+
+                                <button type="submit" class="submit-review">ส่งรีวิว</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <div class="nav-links">
+            <a href="index.html" class="button">กลับหน้าหลัก</a>
+        </div>
+    </div>
 </body>
 </html>
